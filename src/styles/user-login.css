@@ -1,0 +1,36 @@
+.login{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.loginlink{
+background-color: black;    
+}
+/* CSS styles for desktop devices */
+
+.left {
+    float: left;
+    width: 25%;
+  }
+  
+  .main {
+    float: left;
+    width: 50%;
+  }
+  
+  .right {
+    float: right;
+    width: 25%;
+  }
+  
+  /* CSS styles for mobile devices */
+  @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+  }
+  
+    
+
+
+

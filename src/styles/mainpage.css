@@ -1,0 +1,67 @@
+.home-container {
+    
+    top: 8px;
+    left: 0;
+    right: 0;
+    
+}
+
+
+.nav-menu {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+list-style-type: none;
+text-decoration: none;
+
+}
+.nav-item a:link {
+text-decoration: none;    
+}
+.nav-item{
+display: flex;
+background-color: cyan;
+height: 3rem;
+align-items: center;
+width: 150px;
+align-content: center;
+justify-content: space-around;
+border-radius: 30px;
+border: 2px solid black ;
+ 
+   
+}
+body{
+background-color: antiquewhite;    
+}
+.home-container{
+display: flex;
+align-items: center; 
+justify-content: center;
+background-color: blueviolet;   
+}
+
+/* CSS styles for desktop devices */
+
+.left {
+    float: left;
+    width: 25%;
+  }
+  
+  .main {
+    float: left;
+    width: 50%;
+  }
+  
+  .right {
+    float: right;
+    width: 25%;
+  }
+  
+  /* CSS styles for mobile devices */
+  @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+  }
+  
