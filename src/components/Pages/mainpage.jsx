@@ -7,7 +7,7 @@ import ToDoForm from "./TodoForm";
 const MainPage = ({ loggedIn, setLoggedIn, userId }) => {
   const setUserItems = (text) => {
     axios
-      .get("http://127.0.0.1:5000/getall", {
+      .get("https://nomoreadhd-backend.herokuapp.com/getall", {
         text: text,
         user_id: userId,
       })
