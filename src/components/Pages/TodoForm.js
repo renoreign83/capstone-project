@@ -18,7 +18,7 @@ const ToDoForm = ({ userId, data }) => {
 
   const getUserName = () => {
     axios
-    .get(`http://127.0.0.1:5000/user/get/${userId}`)
+    .get(`https://nomoreadhd-backend.herokuapp.com/user/get/${userId}`)
     .then((res) => {
       setUser(res.data);
       console.log(res.data)
@@ -30,7 +30,7 @@ const ToDoForm = ({ userId, data }) => {
 
   const getUserItems = () => {
     axios
-      .get(`http://127.0.0.1:5000/tasks/getall/${userId}`)
+      .get(`https://nomoreadhd-backend.herokuapp.com/tasks/getall/${userId}`)
       .then((res) => {
         console.log("getting >>>>>", res.data);
         setUserItems(res.data);
@@ -45,13 +45,13 @@ const ToDoForm = ({ userId, data }) => {
     event.preventDefault();
     axios({
       method: 'post',
-      url: '"http://127.0.0.1:5000/tasks/add"',
+      url: '"https://nomoreadhd-backend.herokuapp.com/tasks/add"',
      data:{
        tasks:""
      }
     })
     axios
-      .post("http://127.0.0.1:5000/tasks/add", {
+      .post("https://nomoreadhd-backend.herokuapp.com/tasks/add", {
         task: task,
         user_id: userId,
       })
@@ -68,7 +68,7 @@ const ToDoForm = ({ userId, data }) => {
     console.log(userItemId);
     try {
       const response = await axios.delete(
-        `http://127.0.0.1:5000/tasks/delete/${userItemId}`
+        `https://nomoreadhd-backend.herokuapp.com/tasks/delete/${userItemId}`
       );
       console.log("response", response);
       setUserItems(userItems.filter((task) => task.id !== userItemId));
