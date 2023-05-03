@@ -19,7 +19,7 @@ const CreateUser = ({ setLoggedIn }) => {
       setErrorMessage("Error: The passwords must match");
     } else {
       axios
-        .post("http://127.0.0.1:5000/user/add", {
+        .post("https://nomoreadhd-backend.herokuapp.com/user/add", {
           username,
           password,
         })
